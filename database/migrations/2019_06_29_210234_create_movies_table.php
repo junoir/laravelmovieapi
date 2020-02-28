@@ -28,6 +28,8 @@ class CreateMoviesTable extends Migration
             $table->boolean('status')->default(1);
             $table->date('release_date')->nullable();
             $table->timestamps();
+
+            $table->engine = 'InnoDB';
         });
     }
 
