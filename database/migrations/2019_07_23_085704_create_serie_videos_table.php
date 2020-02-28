@@ -23,6 +23,8 @@ class CreateSerieVideosTable extends Migration
             $table->boolean('status')->default(1);
             $table->foreign('episode_id')->references('id')->on('episodes')->onDelete('cascade');
             $table->timestamps();
+
+            $table->engine = 'InnoDB';
         });
     }
 

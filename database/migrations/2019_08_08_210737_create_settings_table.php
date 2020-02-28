@@ -54,6 +54,8 @@ class CreateSettingsTable extends Migration
             $table->String('text_color');
             $table->String('app_bar_title_color');
             $table->timestamps();
+
+            $table->engine = 'InnoDB';
         });
     }
 

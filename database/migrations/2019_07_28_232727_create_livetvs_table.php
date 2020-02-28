@@ -23,6 +23,8 @@ class CreateLivetvsTable extends Migration
             $table->boolean('status')->default(1);
             $table->integer('views')->unsigned()->default(0);
             $table->timestamps();
+
+            $table->engine = 'InnoDB';
         });
     }
 

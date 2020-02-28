@@ -27,6 +27,8 @@ class CreateSeriesTable extends Migration
             $table->boolean('status')->default(1);
             $table->date('first_air_date')->nullable();
             $table->timestamps();
+
+            $table->engine = 'InnoDB';
         });
     }
 

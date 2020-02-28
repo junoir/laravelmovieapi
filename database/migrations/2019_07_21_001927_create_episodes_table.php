@@ -27,6 +27,8 @@ class CreateEpisodesTable extends Migration
             $table->date('air_date')->nullable();
             $table->foreign('season_id')->references('id')->on('seasons')->onDelete('cascade');
             $table->timestamps();
+
+            $table->engine = 'InnoDB';
         });
     }
 

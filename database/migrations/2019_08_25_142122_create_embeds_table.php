@@ -17,6 +17,8 @@ class CreateEmbedsTable extends Migration
             $table->bigIncrements('id');
             $table->text('code');
             $table->timestamps();
+
+            $table->engine = 'InnoDB';
         });
     }
 

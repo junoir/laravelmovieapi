@@ -20,6 +20,8 @@ class CreateSerieGenresTable extends Migration
             $table->foreign('serie_id')->references('id')->on('series')->onDelete('cascade');
             $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade');
             $table->timestamps();
+
+            $table->engine = 'InnoDB';
         });
     }
 

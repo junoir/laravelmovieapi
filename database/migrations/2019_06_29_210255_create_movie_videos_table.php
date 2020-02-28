@@ -23,6 +23,8 @@ class CreateMovieVideosTable extends Migration
             $table->boolean('status')->default(1);
             $table->foreign('movie_id')->references('id')->on('movies')->onDelete('cascade');
             $table->timestamps();
+
+            $table->engine = 'InnoDB';
         });
     }
 
